@@ -1,0 +1,71 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API WMS",
+    "description": "Documentação Recebimento",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "paths": {
+    "/newuser": {
+      "post": {
+        "tags": ["USER"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Project"
+              }
+            }
+          }
+        },
+        "summary": "Buscar Todos os XML's",
+        "description": "Buscar Todos os arquivos XML na pasta",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "matricula": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+
+        "responses": {
+          "200": {
+            "description": "Busca Realizada com Sucesso."
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/registro/{id}": {
+      "get": {
+        "tags": ["CARREGAMENTO"],
+        "summary": "Buscar Produtos da NF",
+        "description": "Buscar Todos os Produtos que contem na NF",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+
+        "responses": {
+          "200": {
+            "description": "Busca Realizada com Sucesso."
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "backend2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Rosa",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "convert-excel-to-json": "^1.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "excel4node": "^1.8.1",
+    "exceljs": "^4.3.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.2.0",
+    "sequelize": "^6.29.3",
+    "swagger-ui-express": "^4.6.2"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0"
+  }
+}
