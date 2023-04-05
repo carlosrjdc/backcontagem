@@ -108,8 +108,6 @@ class EnderecoController {
       ws.cell(i + 1 + inicial, 7).number(
         item.Unidade === null || item.Unidade === undefined ? 0 : item.Unidade
       ); //O primeiro parametro é a linha da planilha o segundo é a coluna
-
-      inicial = 0;
     });
 
     try {
