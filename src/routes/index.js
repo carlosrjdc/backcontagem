@@ -11,10 +11,14 @@ const routes = (app) => {
   app.route("/").get((req, res) => {
     res.status(200).send({ Titulo: "Carlos Roberto" });
   });
+  var corsOptions = {
+    origin: "*",
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  };
 
   app.use(
     express.json(),
-    cors(),
+    cors(corsOptions),
     user,
     endereco,
     material,
